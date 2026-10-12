@@ -6,6 +6,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatakuliahController;
 
 use App\Http\Controllers\QuestionController;
+use Illuminate\View\View;
+
+Route::get('/home-question-respon', function () {
+    return view('home-question-respon');
+})->name('home-question-respon');
+
+
+
 Route::post('question/store', [QuestionController::class, 'store'])
 		->name('question.store');
 
@@ -18,9 +26,6 @@ Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
 Route::get('/matakuliah/{kode}/edit', [MatakuliahController::class, 'edit']);
 Route::put('/matakuliah/{kode}', [MatakuliahController::class, 'update']);
 Route::delete('/matakuliah/{kode}', [MatakuliahController::class, 'destroy']);
-
-
-
 Route::get('/pcr', function () {
     return 'Selamat Datang di Website Kampus PCR!';
 });

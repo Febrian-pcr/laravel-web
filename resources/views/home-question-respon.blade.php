@@ -50,18 +50,22 @@
     </style>
 </head>
 <body>
-
+@if (session('info'))
+    <div class="alert alert-info">
+        {!! session('info') !!}
+    </div>
+@endif
     <div class="thankyou-container">
-        <h2>Terima Kasih, {{$nama}}! 🎉</h2>
+        <h2>Terima Kasih, {{session('nama')}}! 🎉</h2>
         <p class="lead">Pertanyaan Anda telah berhasil dikirim.</p>
 
         <blockquote>
             <strong>Pertanyaan Anda:</strong><br>
-            "{{$pertanyaan}}"
+            "{{session('pertanyaan')}}"
         </blockquote>
 
         <p class="email-info mt-4">
-            Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>{{$email}}</strong>.<br><br>
+            Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>{{session('email')}}</strong>.<br><br>
             Mohon cek kotak masuk atau folder spam Anda secara berkala.
         </p>
 
