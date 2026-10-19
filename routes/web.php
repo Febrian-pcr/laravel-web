@@ -6,8 +6,14 @@ use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatakuliahController;
 
+
+
 use App\Http\Controllers\QuestionController;
 use Illuminate\View\View;
+
+//pertemuan 7
+use App\Http\Controllers\PelangganController;
+Route::resource('pelanggan', PelangganController::class);
 
 //pertemuan 6
 Route::get('dashboard', [DashboardController::class,'index'])->name('dashboard');
