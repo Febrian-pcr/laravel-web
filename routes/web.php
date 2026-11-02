@@ -11,6 +11,11 @@ use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\QuestionController;
 use Illuminate\View\View;
 
+
+// pertemuan 9
+use App\Http\Controllers\UserController;
+Route::resource('user',UserController::class);
+
 //pertemuan 7
 use App\Http\Controllers\PelangganController;
 Route::resource('pelanggan', PelangganController::class);
